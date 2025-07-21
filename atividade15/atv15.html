@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Adivinhação</title>
+</head>
+<body>
+    <h2>Jogo da Adivinhação</h2>
+    <p>Estou pensando em um número entre 1 e 20.</p>
+    <form action="atv15.php" method="post">
+        <label>Qual o seu palpite?</label>
+        <input type="number" name="palpite" min="1" max="20" required>
+       
+        <input type="hidden" name="secreto" value="<?= rand(1, 20) ?>">
+        <input type="hidden" name="tentativas" value="1">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
